@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit.components.v1 import html
 
 st.set_page_config(
     page_title="Hello",
@@ -36,3 +37,9 @@ hide_st_style = """
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
+
+st.markdown('''<style>
+#root > div:nth-child(1) > div > div > a {
+     display: none;
+}
+</style>''', unsafe_allow_html=True)
