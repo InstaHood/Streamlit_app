@@ -31,10 +31,11 @@ st.markdown(
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
-            #root > div:nth-child(1) > div > div > a {visibility: hidden;}
             footer {visibility: hidden;}
             header {visibility: hidden;}
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
+js_delete = '''window.parent.document.querySelector("#root > div:nth-child(1) > div > div > a").remove()''' 
+html(f'''<script>{js_delete}</script>''', width=0, height=0)
