@@ -30,6 +30,7 @@ st.markdown(
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
+            #root > div:nth-child(1) > div > div > a {visibility: hidden;}
             footer {visibility: hidden;}
             header {visibility: hidden;}
             </style>
